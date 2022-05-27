@@ -30,8 +30,6 @@ export default function Feed({user, handleLogout}) {
         setError(err.message);
       }
     }
-<<<<<<< HEAD
-=======
 
     async function deletePost(postId) {
       console.log('delete: ', postId);
@@ -46,7 +44,6 @@ export default function Feed({user, handleLogout}) {
         setError(err.message);
       }
     }
->>>>>>> working
     async function addComment(postId){
       try {
         const data = await commentAPI.addComment(postId)
@@ -120,10 +117,7 @@ export default function Feed({user, handleLogout}) {
             loading = {loading}
             addComment = {addComment}
             removeComment = {removeComment} 
-<<<<<<< HEAD
-=======
             deletePost= {deletePost}
->>>>>>> working
             />
           </Grid.Column>
         </Grid.Row>

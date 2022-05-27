@@ -11,17 +11,7 @@ function App() {
   // this object corresponds to the jwt payload which is defined in the server signup or login function that looks like
   // this  const token = createJWT(user); // where user was the document we created from mongo
 
-<<<<<<< HEAD
-  function handleLogin() {
-    console.log('login');
-    console.log(userService.getUser());
-    setUser(userService.getUser()); // getting the user from localstorage decoding the jwt
-  }
-
-  function handleSignUp(props) {
-=======
   function handleSignUpOrLogin() {
->>>>>>> working
     setUser(userService.getUser()); // getting the user from localstorage decoding the jwt
   }
 
@@ -36,19 +26,11 @@ function App() {
         <Route path="/" element={<Feed user={user} handleLogout={handleLogout} />} />
         <Route
           path="/login"
-<<<<<<< HEAD
-          element={<LoginPage handleLogin={handleLogin} />}
-        />
-        <Route
-          path="/signup"
-          element={<SignupPage handleSignUp={handleSignUp} />}
-=======
           element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />}
         />
         <Route
           path="/signup"
           element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin} />}
->>>>>>> working
         />
         
       </Routes>
@@ -57,14 +39,9 @@ function App() {
 
   return (
     <Routes>
-<<<<<<< HEAD
-      <Route path="/login" element={<LoginPage handleLogin={handleLogin} />} />
-      <Route path="/signup" element={<SignupPage handleSignUp={handleSignUp} />} />
-=======
       <Route path="/" element={< Feed />} />
       <Route path="/login" element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />} />
       <Route path="/signup" element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin} />} />
->>>>>>> working
       <Route path="/*" element={<Navigate to="/login" />} />
     </Routes>
   );

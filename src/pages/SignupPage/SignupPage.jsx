@@ -27,12 +27,8 @@ export default function SignUpPage(props) {
     }
 
     try {
-<<<<<<< HEAD
-      await props.handleSignUp(formData);
-=======
       await userService.signup(formData) 
       props.handleSignUpOrLogin();
->>>>>>> working
       navigate('/')
     } catch(err){
       console.log(err.message);

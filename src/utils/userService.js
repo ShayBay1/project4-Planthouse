@@ -5,10 +5,6 @@ const BASE_URL = "/api/users/";
 // NOTE THIS IS configured to send of a multi/part form request
 // aka photo
 function signup(user) {
-<<<<<<< HEAD
-  console.log(user);
-=======
->>>>>>> working
   return (
     fetch(BASE_URL + "signup", {
       method: "POST",
@@ -22,17 +18,9 @@ function signup(user) {
       // Parameter destructuring!
       .then(({ token }) => tokenService.setToken(token))
   );
-  // Setting our token in localStorage in our browser
-  // then we'll be able to use with every request!
-  // The above could have been written as
-  //.then((token) => token.token);
 }
 
 function getUser() {
-<<<<<<< HEAD
-  console.log('get user');
-=======
->>>>>>> working
   return tokenService.getUserFromToken();
 }
 

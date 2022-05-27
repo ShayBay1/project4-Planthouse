@@ -20,16 +20,6 @@ export default function LoginPage(props) {
     });
   }
   async function handleSubmit(e) {
-<<<<<<< HEAD
-    console.log('in');
-    e.preventDefault();
-    try {
-      await props.handleLogin(state);
-      navigate("/");
-    } catch (err) {
-      setError(err.message);
-      console.log(err);
-=======
     e.preventDefault();
     try {
       await userService.login(state);
@@ -37,7 +27,6 @@ export default function LoginPage(props) {
       navigate("/");
     } catch (err) {
       setError(err.message);
->>>>>>> working
     }
   }
   return (

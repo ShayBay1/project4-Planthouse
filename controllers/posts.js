@@ -5,18 +5,11 @@ const s3 = new S3();
 
 module.exports = {
     create,
-<<<<<<< HEAD
-    index,
-}
-
-function create(req, res){
-=======
     remove,
     index
 }
 function create(req, res){
     console.log('CREATE');
->>>>>>> working
     console.log(req.file, req.body, 'this is create method', req.user)
     try {
         const filePath = `${uuidv4()}/${req.file.originalname}`
@@ -36,10 +29,6 @@ function create(req, res){
     }
 }
 
-<<<<<<< HEAD
-async function index(req, res){
-    console.log('in index');
-=======
 async function remove(req, res){
     console.log('REMOVE');
 
@@ -62,14 +51,9 @@ async function remove(req, res){
 
 async function index(req, res){
     console.log('INDEX');
->>>>>>> working
     try {
         const posts = await Post.find({}).populate('user').exec()
         res.status(200).json({posts})
     } catch(err){
-<<<<<<< HEAD
-
-=======
->>>>>>> working
     }
 }
